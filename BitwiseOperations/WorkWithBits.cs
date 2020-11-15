@@ -7,7 +7,7 @@ namespace BitwiseOperations
     /// <summary>
     /// Биты нумеруются справа налево, т.е. [63-ый, 62-ой, ... , 0-ой].
     /// </summary>
-    static class WorkWithBits
+    public static class WorkWithBits
     {
         private static ulong One
         {
@@ -249,6 +249,22 @@ namespace BitwiseOperations
 
             return answer;
 
+        }
+
+        /// <summary>
+        /// Поиск двоичной длины числа (до последней единицы справа налево)
+        /// </summary>
+        /// <param name="number"> число </param> 
+        public static int FindBinaryLength(uint number)
+        {
+            int count = 0;
+
+            while (!(number == 0))
+            {
+                number = number >> 1;
+                count++;
+            }
+            return count;
         }
     }
 }
