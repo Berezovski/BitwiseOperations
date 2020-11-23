@@ -34,12 +34,6 @@ namespace BitwiseOperations
         /// <param name="count"> нужное количество младших битов, которые хотим получить; возможные значения [0, 64] </param> 
         public static ulong GetLowBits(ulong number, int count)
         {
-            // для скорости работы
-            if ((number >> count) == 0)
-            {
-                return number;
-            }
-
             if (Marshal.SizeOf(number) * 8 == count)
             {
                 return number;
