@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GaloisField</name>
+    </assembly>
+    <members>
+        <member name="T:GaloisField.GF">
+            <summary>
+            Класс для работы с полем GF (Галуа)
+            </summary>
+        </member>
+        <member name="M:GaloisField.GF.Mod(System.UInt32,System.UInt32)">
+            <summary>
+            Взятие остатка от деления на mod
+            </summary>
+            <param name="number"> Число </param> 
+            <param name="mod"> Модуль полинома </param>
+            <returns> Остаток многочлена </returns>
+        </member>
+        <member name="M:GaloisField.GF.Dividing(System.UInt32,System.UInt32)">
+            <summary>
+            Взятие целой части от деления многочлена на divider
+            </summary>
+            <param name="number"> Число </param> 
+            <param name="divider"> Делитель полинома </param>
+            <returns> Целая часть многочлена </returns>
+        </member>
+        <member name="M:GaloisField.GF.AdvancedGCD(System.UInt32,System.UInt32,System.UInt32@,System.UInt32@)">
+            <summary>
+            Расширенный алгоритм Евклида адаптированный под GF поле [ a*x + b*y = gcd(a,b) ]
+            </summary>
+            <param name="firstCoefficient"> Коэффициент 'a' при x </param> 
+            <param name="secondCoefficient"> Коэффициент 'b' при x </param>
+            <param name="x"> Выходное число x </param> 
+            <param name="y"> Выходное число y </param>
+            <returns> Возвращает НОД от firstCoefficient и secondCoefficient </returns>
+        </member>
+        <member name="M:GaloisField.GF.MultiplicativeReverse(System.UInt32,System.UInt32)">
+            <summary>
+            Нахождение мультипликативного обратного числа 
+            </summary>
+            <param name="number"> Полином </param> 
+            <param name="module"> Модуль по которому осуществляется поиск обратного (полином) </param>
+            <returns> Возвращает мультипликативный обратный от числа number </returns>
+        </member>
+        <member name="M:GaloisField.GF.Multy(System.UInt32,System.UInt32)">
+            <summary>
+            Умножение полиномов
+            </summary>
+            <param name="firstNumber"> Первый полином </param> 
+            <param name="secondNumber"> Второй полином </param>
+            <returns> Возвращает умножение двух полиномов </returns>
+        </member>
+        <member name="M:GaloisField.GF.PrintGfElement(System.UInt32)">
+            <summary>
+            Выводит полином в подобающем пользовательском виде 
+            (степень x это нумерация бита справа налево)
+            </summary>
+            <param name="number"> Полином </param> 
+            <returns> Возвращает строку в виде привычного полинома </returns>
+        </member>
+    </members>
+</doc>

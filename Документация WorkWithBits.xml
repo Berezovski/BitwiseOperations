@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BitwiseOperations</name>
+    </assembly>
+    <members>
+        <member name="T:BitwiseOperations.WorkWithBits">
+            <summary>
+            Биты нумеруются справа налево, т.е. [63-ый, 62-ой, ... , 0-ой].
+            </summary>
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.PrintBit(System.UInt64,System.Int32)">
+            <summary>
+            Выводит нужный бит
+            </summary>
+            <param name="number"> число </param> 
+            <param name="place"> номер нужного бита, возможные значения [0, 63] </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.GetLowBits(System.UInt64,System.Int32)">
+            <summary>
+            Возвращает младшие биты
+            </summary>
+            <param name="number"> число </param> 
+            <param name="count"> нужное количество младших битов, которые хотим получить; возможные значения [0, 64] </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.SetOrRemove(System.UInt64,System.UInt64,System.Int32)">
+            <summary>
+            Ставит указанный бит на определённое место
+            </summary>
+            <param name="number"> число </param> 
+            <param name="bit"> бит, который нужно поставить = 0,1. </param> 
+            <param name="place"> номер нужного бита, возможные значения [0, 63] </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.SwapOnlyTwoBits(System.UInt64,System.Int32,System.Int32)">
+            <summary>
+            Меняет местами два бита
+            </summary>
+            <param name="number"> число </param> 
+            <param name="firstBitPlace"> номер нужного первого бита, возможные значения [0, 63] </param> 
+            <param name="secondBitPlace"> номер нужного второго бита, возможные значения [0, 63] </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.LowBitsToZero(System.UInt64,System.Int32)">
+            <summary>
+            Зануляет младшие биты
+            </summary>
+            <param name="number"> число </param> 
+            <param name="count">  кол-во битов </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.GlueBitsOnLeftAndRightSides(System.UInt64,System.Int32,System.Int32)">
+            <summary>
+            Склеивание крайних битов 
+            </summary>
+            <param name="number"> число </param> 
+            <param name="numberLength"> длина используемых битов </param>
+            <param name="leftOrRightBitCount">  кол-во битов которые мы хотим оставить справа (или слева соответственно) </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.CutMiddleBits(System.UInt64,System.Int32,System.Int32)">
+            <summary>
+            Вырезание битов по середине от крайних
+            </summary>
+            <param name="number"> число </param> 
+            <param name="numberLength"> длина используемых битов </param>
+            <param name="leftOrRightBitCount"> кол-во битов которые мы хотим вырезать справа (или слева соответственно) </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.CutBitsWithBeginningAndEndingPlaces(System.UInt64,System.Int32,System.Int32)">
+            <summary>
+            Вырезание битов в промежутке [beginningPlace,endingPlace] 
+            </summary>
+            <param name="number"> число </param> 
+            <param name="beginningPlace"> порядок начального бита (включительно) </param>
+            <param name="endingPlace">  порядок конечного бита (включительно) </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.SwapBytes(System.UInt64,System.Int32[])">
+            <summary>
+            Свап байтов в соответствии с userBtNumeration
+            </summary>
+            <param name="number"> число </param> 
+            <param name="userBtNumeration"> порядок байтов (изначальный порядок [7,6,...,0])</param>
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.FindSecondDegree(System.UInt64)">
+            <summary>
+            Нахождение степени двойки числа
+            </summary>
+            <param name="number"> число </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.FindSecondDegreeWithThisTask(System.UInt64)">
+            <summary>
+            Найти степень двойки p, чтобы в промежутке (2^p ; 2^(p+1)) лежало число number
+            </summary>
+            <param name="number"> число </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.XorBits(System.UInt64)">
+            <summary>
+            Проксорить все биты
+            </summary>
+            <param name="number"> число </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.CycleLeft(System.UInt64,System.Int32,System.Int32)">
+            <summary>
+            Циклический сдвиг влево
+            </summary>
+            <param name="number"> число </param> 
+            <param name="numberLength"> длина активных битов number </param> 
+            <param name="count"> число, на которое будет произведён сдвиг битов </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.CycleRight(System.UInt64,System.Int32,System.Int32)">
+            <summary>
+            Циклический сдвиг вправо
+            </summary>
+            <param name="number"> число </param> 
+            <param name="numberLength"> длина активных битов number </param> 
+            <param name="count"> число, на которое будет произведён сдвиг битов </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.SwapBits(System.UInt64,System.Int32[])">
+            <summary>
+            Свап битами, упорядоченный в соответствии с userNumeration
+            </summary>
+            <param name="number"> число </param> 
+            <param name="userNumeration"> новый порядок битов (изначальный [63,62,...,0]) </param> 
+        </member>
+        <member name="M:BitwiseOperations.WorkWithBits.FindBinaryLength(System.UInt32)">
+            <summary>
+            Поиск двоичной длины числа (до последней единицы справа налево)
+            </summary>
+            <param name="number"> число </param> 
+        </member>
+    </members>
+</doc>
